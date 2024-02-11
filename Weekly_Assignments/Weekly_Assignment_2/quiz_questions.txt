@@ -1,163 +1,91 @@
+MCQ
 1._________are words that a programming language has set aside for its own use ?
-Control words
-Control structures 
-Reserved words 
-Reserved keys 
-
-Answer: Reserved words
-
+a)Control words
+b)Control structures
+c)Reserved words
+d)Reserved keys
+|Answer: Reserved words
 2.Which of the following software could assist someone who cannot use their hands for computer input ?
-Video conferencing 
-Speech recognition 
-Audio digitizer 
-Synthesizer 
-
-Answer: Speech recognition
-
+a)Video conferencing
+b)Speech recognition
+c)Audio digitizer
+d)Synthesizer
+|Answer: Speech recognition
 3.__________ is the process of finding errors in software code ?
-Hacking 
-Compiling 
-Testing 
-Debugging 
-
-Answer: Debugging
-
+a)Hacking
+b)Compiling
+c)Testing
+d)Debugging
+|Answer: Debugging
 4.A series of instructions that tells a computer what to do and how to do it is called a ________ ?
-program 
-command 
-user response 
-processor 
-
-Answer: program
-
+a)program
+b)command
+c)user response
+d)processor
+|Answer: program
 5.A __________ shares hardware, software, and data among authorized users ?
-network 
-protocol 
-hyperlink 
-transmitter 
-
-Answer: network
-
+a)network
+b)protocol
+c)hyperlink
+d)transmitter
+|Answer: network
 6.The basic computer processing cycle consists of _______ ?
-input, processing and output 
-systems and application 
-data, information and applications 
-hardware, software and storage 
-
-Answer: input, processing and output
-
+a)input, processing and output
+b)systems and application
+c)data, information and applications
+d)hardware, software and storage
+|Answer: input, processing and output
 7.System software ?
-allows the user to diagnose and troubleshoot the device 
-is a programming language 
-is part of a productivity suite 
-helps the computer manage internal resources 
-
-Answer: helps the computer manage internal resources
-
+a)allows the user to diagnose and troubleshoot the device
+b)is a programming language
+c)is part of a productivity suite
+d)helps the computer manage internal resources
+|Answer: helps the computer manage internal resources
 8._____ is the process of carrying out commands ?
-Fetching 
-Storing 
-Executing 
-Decoding 
-
-Answer: Executing
-
+a)Fetching
+b)Storing
+c)Executing
+d)Decoding
+|Answer: Executing
 9.This can be another word for program ?
-software 
-disk 
-floppy 
-hardware 
-
-Answer: software
-
+a)software
+b)disk
+c)floppy
+d)hardware
+|Answer: software
 10.Information that comes from an external source and fed into computer software is called ?
-Output 
-Input 
-Throughput 
-Reports 
-
-Answer: Input
-
+a)Output
+b)Input
+c)Throughput
+d)Reports
+|Answer: Input
 11.Which of the following information systems focuses on making manufacturing processes more efficient and of higher quality ?
-Computer-aided manufacturing 
-Computer-integrated manufacturing 
-Computer-aided software engineering 
-Computer-aided system engineering 
-
-Answer: Computer-aided manufacturing
-
+a)Computer-aided manufacturing
+b)Computer-integrated manufacturing
+c)Computer-aided software engineering
+d)Computer-aided system engineering
+|Answer: Computer-aided manufacturing
 12.For seeing the output, you use ?
-Monitor 
-Keyboard 
-Mouse 
-Scanner 
-
-Answer: Monitor
-
+a)Monitor
+b)Keyboard
+c)Mouse
+d)Scanner
+|Answer: Monitor
 13.Computer programs are also known as __________ ?
-operating systems 
-documents 
-peripherals 
-applications 
-
-Answer: applications
-
+a)operating systems
+b)documents
+c)peripherals
+d)applications
+|Answer: applications
 14. A (n) –– is a program that makes the computer easier to use ?
-utility 
-application 
-operating system 
-network 
-
-Answer: operating system
-
+a)utility
+b)application
+c)operating system
+d)network
+|Answer: operating system
 15.The person who writes and tests computer programs is called a ?
-programmer 
-computer scientist 
-software engineer 
-project developer
-
-Answer: programmer
-
-
-One Word Answer
-1. What are two things you can never eat for breakfast?
-Lunch and Dinner
-
-2. What is always coming but never arrives? 
-Tomorrow
-
-3. What gets wetter the more it dries? 
-A towel
-
-4. What can be broken but never held? 
-A promise
-
-5. What word is spelled incorrectly in every single dictionary?
-Incorrectly
-
-6. What is it that lives if it is fed, and dies if you give it a drink?
-Fire
-
-7. What never asks a question but gets answered all the time?
-Your cellphone
-
-8. What word would you use to describe a man who does not have all his fingers on one hand?
-Normal, because people usually have half their fingers on one hand.
-
-9. What goes up but never ever comes down?
-Your age
-
-10. What can one catch that is not thrown?
-A cold
-
-12. If you have one, you want to share it. But once you share it, you do not have it. What is it?
-A secret
-
-13. What starts with "e" and ends with "e" but only has one letter in it?
-An envelope
-
-14. If a plane crashes on the border between the United States and Canada, where do they bury the survivors?
-Survivors aren’t buried!
-
-15. How can a girl go 25 days without sleep?
-She sleeps at night
+a)programmer
+b)computer scientist
+c)software engineer
+d)project developer
+|Answer: programmer
