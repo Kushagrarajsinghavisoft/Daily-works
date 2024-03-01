@@ -32,7 +32,7 @@ def detail_view(request, id):
     context = {}    #to pass data from view to template
 
     # Retrieve a specific student object based on the roll_no
-    context['data'] = Student.objects.get(roll_no=id)
+    
 
     return render(request, "detail_view.html", context)     #to generate a HTTP response by rendering the specified HTML template (detail_view.html)
 
