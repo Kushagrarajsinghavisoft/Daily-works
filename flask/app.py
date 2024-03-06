@@ -3,10 +3,13 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 app = Flask(__name__)
+# Configuration for the database connection
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:root@localhost/todo'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-db = SQLAlchemy(app)
+db = SQLAlchemy(app) #creating SQLAlchemy class object(db) which sets up a link between the Flask application (app) 
+                     #and the SQLAlchemy database (db)
 
+# Model representing the 'Todo' table in the database
 class Todo(db.Model):
     sno = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
@@ -23,38 +26,52 @@ def initdb_command():
         db.create_all()
         print("Initialized the database.")
 
+# Route for the main page, handling both GET and POST requests
 @app.route('/', methods=['GET', 'POST'])
-def hello_world():
-    if request.method=='POST':
-        title=request.form['title']
-        desc=request.form['desc']
-        todo=Todo(title=title,desc=desc)
+def view():
+    # Handling POST request to add a new Todo
+    if request.method == 'POST':
+        title = request.form['title']
+        desc = request.form['desc']
+        todo = Todo(title=title, desc=desc)
         db.session.add(todo)
         db.session.commit()
-    allTodo=Todo.query.all()
-    return render_template('index.html',allTodo=allTodo)
 
+    # Fetching all Todo items from the database
+    allTodo = Todo.query.all()
+
+    # Rendering the main page with the list of Todo items
+    return render_template('index.html', allTodo=allTodo)
+
+# Route for updating a Todo item, handling both GET and POST requests
 @app.route('/update/<sno>', methods=['GET', 'POST'])
 def update(sno):
-    if request.method=='POST':
-        title=request.form['title']
-        desc=request.form['desc']
-        todo=Todo.query.filter_by(sno=sno).first()
-        todo.title=title
-        todo.desc=desc
+    # Handling POST request to update a Todo
+    if request.method == 'POST':
+        title = request.form['title']
+        desc = request.form['desc']
+        todo = Todo.query.filter_by(sno=sno).first()
+        todo.title = title
+        todo.desc = desc
         db.session.add(todo)
         db.session.commit()
         return redirect("/")
-    
-    todo=Todo.query.filter_by(sno=sno).first()
-    return render_template('update.html',todo=todo)
 
+    # Fetching the Todo item to be updated
+    todo = Todo.query.filter_by(sno=sno).first()
+    return render_template('update.html', todo=todo)
+
+# Route for deleting a Todo item
 @app.route('/delete/<int:sno>')
 def delete(sno):
-    todo=Todo.query.filter_by(sno=sno).first()
+    # Fetching the Todo item to be deleted
+    todo = Todo.query.filter_by(sno=sno).first()
+    
+    # Deleting the Todo item from the database
     db.session.delete(todo)
     db.session.commit()
-    # print(allTodo)
+    
+    # Redirecting back to the main page
     return redirect("/")
 
 if __name__ == '__main__':
