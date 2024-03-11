@@ -133,7 +133,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [STATIC_DIR,]
 
 #MEDIA
-MEDIA_ROOT=MEDIA_DIR
+MEDIA_ROOT='C:/Users/kusha/OneDrive/Desktop/Python_Workspace/django/learning_users/media/'
 MEDIA_URL = '/media/'
 
 LOGIN_URL = '/basic_app/user_login'
