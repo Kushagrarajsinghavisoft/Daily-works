@@ -243,6 +243,6 @@ e.DEPARTMENT_ID=d.DEPARTMENT_ID;
 SELECT e.FIRST_NAME, e.LAST_NAME, e.JOB_ID, d.DEPARTMENT_ID, d.DEPARTMENT_NAME FROM employees AS e JOIN departments AS d ON
 e.DEPARTMENT_ID=d.DEPARTMENT_ID WHERE d.LOCATION_ID=2400;
 
-#SOLUTION 3
+#SOLUTION 4
 SELECT e.employee_id AS 'Emp_Id', e.last_name AS 'Employee', m.employee_id AS 'Mgr_Id', m.last_name AS 'Manager' 
 from employees e JOIN employees m ON (e.manager_id = m.employee_id);
