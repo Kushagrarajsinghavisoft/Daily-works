@@ -11,7 +11,7 @@ FROM employees WHERE HIRE_DATE>
 #QUESTION 2
 -- 2.Write a MySQL query to get the department name and number of employees in the department.
 
-#ANSWER 2
+#SOLUTION 2
 SELECT d.DEPARTMENT_NAME, COUNT(e.DEPARTMENT_ID) AS NO_OF_EMPLOYEES 
 FROM employees AS e 
 JOIN departments AS d 
@@ -70,11 +70,12 @@ INSERT INTO jobs (JOB_ID, JOB_TITLE, MIN_SALARY, MAX_SALARY) VALUES
 ('PR_REP', 'Public Relations Representative', 4500, 10500);
 
 
-#ANSWER 2
+
 #QUESTION 3
 -- 3.Write a MySQL query to find the employee ID, job title, number of days between ending date and 
 -- starting date for all jobs in department 90 from job history.
 
+#SOLUTION 3
 SELECT jh.EMPLOYEE_ID, j.JOB_TITLE, (jh.END_DATE-jh.START_DATE) as DAYS 
 FROM job_history as jh 
 JOIN jobs as j ON j.JOB_ID = jh.JOB_ID 
@@ -83,7 +84,7 @@ WHERE jh.DEPARTMENT_ID = 90;
 #QUESTION 4
 -- 4.Write a MySQL query to display the department ID and name and first name of manager.
 
-#ANSWER 4
+#SOLUTION 4
 SELECT d.DEPARTMENT_ID, d.DEPARTMENT_NAME, d.MANAGER_ID, e.FIRST_NAME 
 FROM departments AS d 
 JOIN employees AS e 
@@ -93,7 +94,7 @@ ON e.EMPLOYEE_ID = d.MANAGER_ID;
 #QUESTION 5
 -- 5.Write a MySQL query to display the department name, manager name, and city.
 
-#ANSWER 5
+#SOLUTION 5
 SELECT d.DEPARTMENT_ID,d.DEPARTMENT_NAME, e.FIRST_NAME, l.city 
 FROM departments as d 
 JOIN locations as l 
@@ -105,7 +106,7 @@ ON e.EMPLOYEE_ID=d.MANAGER_ID;
 #QUESTION 6
 -- 6.Write a MySQL query to display the job title and average salary of employees.
 
-#ANSWER 6
+#SOLUTION 6
 SELECT j.JOB_TITLE, ROUND(AVG(e.SALARY)) AS AVG_SALARY 
 FROM jobs AS j 
 JOIN employees AS e ON e.JOB_ID = j.JOB_ID 
