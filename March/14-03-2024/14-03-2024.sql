@@ -69,7 +69,11 @@ INSERT INTO countries (country_id, country_name, region_id) VALUES
 ('ZM', 'Zambia', 4),
 ('ZW', 'Zimbabwe', 4);
 
-select l.location_id, l.street_address, l.city, l.state_province, c.country_name from locations as l join countries as c on l.country_id=c.country_id;
+#ANSWER1
+select l.location_id, l.street_address, l.city, l.state_province, c.country_name 
+from locations as l 
+join countries as c 
+on l.country_id=c.country_id;
 
 
 #SOLUTION 2
@@ -233,11 +237,9 @@ INSERT INTO departments (DEPARTMENT_ID, DEPARTMENT_NAME, MANAGER_ID, LOCATION_ID
 (260, 'Recruiting', 0, 1700),
 (270, 'Payroll', 0, 1700);
 
-
 #SOLUTION 2
 SELECT e.FIRST_NAME, e.LAST_NAME, d.DEPARTMENT_ID, d.DEPARTMENT_NAME FROM employees AS e JOIN departments AS d ON
 e.DEPARTMENT_ID=d.DEPARTMENT_ID;
-
 
 #SOLUTION 3
 SELECT e.FIRST_NAME, e.LAST_NAME, e.JOB_ID, d.DEPARTMENT_ID, d.DEPARTMENT_NAME FROM employees AS e JOIN departments AS d ON
