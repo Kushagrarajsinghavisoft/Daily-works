@@ -1,0 +1,2 @@
+This is a .txt file comparator. It basically does the comparison between given two files. It just checks the words which are different. 
+Hello my name is Text File Comparator. Welcome to my world. I will tell you what is the difference between two files.   

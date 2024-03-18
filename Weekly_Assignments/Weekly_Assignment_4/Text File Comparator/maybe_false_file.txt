@@ -1,0 +1,2 @@
+This is a .text file comparator. It basically does the comparison between given two files. It just checks the word which are different.
+Hello my name is Csv File Comparator. Welcome too my world. I will tell you what is the difference between two files.
