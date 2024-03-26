@@ -1,0 +1,49 @@
+{% extends 'basic_app/base.html' %}
+
+{% load static %}
+
+{% block body_block %}
+<div class="container my-3">
+  <h2>Add a Todo</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-dark">Submit</button>
+  </form>
+</div>
+
+<div class="container my-3">
+  <h2>Your Todo List</h2>
+  {% if allTodo %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">SNo</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Time</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for todo in allTodo %}
+      <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>{{ todo.title }}</td>
+        <td>{{ todo.desc }}</td>
+        <td>{{ todo.date_created }}</td>
+        <td>
+          <a href="{% url 'update' todo.sno %}" class="btn btn-dark btn-sm mx-1">UPDATE</a>
+          <a href="{% url 'delete' todo.sno %}" class="btn btn-dark btn-sm">DELETE</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <div class="alert alert-primary" role="alert">
+    No Todos Found!! Add one.
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
