@@ -1,6 +1,13 @@
 {% extends 'basic_app/base.html' %}
 {% block body_block %}
-<div class="jumbotron">
-    <h1>Django Todos App</h1>
-</div>
+<div class="container">
+    <!-- Introductory Content -->
+    <div class="jumbotron mt-3">
+        <h1>Welcome to Taskify</h1>
+        <p class="lead">Taskify is your go-to platform for efficient task management tailored specifically 
+            for developers enrolled in Python, Java, or MERN courses. With Taskify, you can easily manage your tasks,
+             collaborate with mentors, and track your progress throughout your learning journey.</p>
+        <a class="btn btn-primary btn-lg" href="{% if user.is_authenticated %}{% url 'create_view' %}{% else %}{% url 'basic_app:user_login' %}{% endif %}" role="button">See Your Tasks</a>
+
+    </div>
 {% endblock %}

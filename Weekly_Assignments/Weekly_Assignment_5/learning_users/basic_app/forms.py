@@ -17,4 +17,4 @@ class UserProfileInfoForm(forms.ModelForm):
 class TodoForm(forms.ModelForm):
     class Meta:
         model = Todo
-        fields = ['title', 'desc']
+        fields = ['title', 'desc','course']

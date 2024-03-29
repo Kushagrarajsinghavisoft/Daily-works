@@ -2,23 +2,39 @@
 {% load static %}
 
 {% block body_block %}
+<div class="container">
+    <div class="jumbotron">
+        {% if registered %}
+            <h1 class="display-4">Thank You for registering!</h1>
+        {% else %}
+            <h1 class="display-4">Register Here</h1>
+            <h3>Fill out the Form:</h3>
 
-<div class="jumbotron">
-    {% if registered %}
-        <h1>Thank You for registering!</h1>
-
-    {% else %}
-        <h1>Register Here</h1>
-        <h3>Fill out the Form:</h3>
-
-        <form enctype="multipart/form-data" method="POST">
-            {% csrf_token %}
-            {{ user_form.as_p }}
-            {{ profile_form.as_p }}
-            <input type="submit" name="" value="Register">
-        </form>
-
-    {% endif %}
+            <form enctype="multipart/form-data" method="POST" class="mt-4">
+                {% csrf_token %}
+                <div class="mb-3">
+                    {{ user_form.username.label_tag }}
+                    {{ user_form.username }}
+                </div>
+                <div class="mb-3">
+                    {{ user_form.email.label_tag }}
+                    {{ user_form.email }}
+                </div>
+                <div class="mb-3">
+                    {{ user_form.password.label_tag }}
+                    {{ user_form.password }}
+                </div>
+                <div class="mb-3">
+                    {{ profile_form.course.label_tag }}
+                    {{ profile_form.course }}
+                </div>
+                <div class="mb-3">
+                    {{ profile_form.profile_pic.label_tag }}
+                    {{ profile_form.profile_pic }}
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+        {% endif %}
+    </div>
 </div>
-
 {% endblock %}
